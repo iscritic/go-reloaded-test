@@ -1,12 +1,19 @@
-# Go reloded test 🤯
-- Разместите содержимое в корневую папку с программой:
+# go-reloded-test
+This is a fork of the [go-reloaded_test](https://github.com/saveAsPerfect/go-reloaded_test) project.
+
+## Objectives
+go-reload-test is automatic tester for go-reload project.
+
+## How to use
+
+- Place the contents in the root folder of the program:
 ```
-├── testCases/
+├── TestCases/
 │   ├──case1.txt
 │   └── ...
-├── testOut/
-├── testX/
-|   ├──case1X.txt
+├── YourOutput/
+├── ExpectedOutput/
+|   ├──case1_expected.txt
 │   └── ...
 │  
 ├── main.go
@@ -14,9 +21,13 @@
 └── script.sh
 
 ```
-- Запустите ./script.sh (возможно, вам потребуется выполнить chmod +x script.sh). 🙄
+Change the permissions to make the script executable and run.
+```
+$chmod +x script.sh
+$./script.sh
+```
 
-Файлы которые не прошли тесты, сохранятся в папке ./TestOut. В терминале вы увидите ошибки в вашем тексте и ожидаемый вывод:
+Failed cases will be displayed in red, with `your output` on top and the `expected` one below it
 ```
 < AN book an apple a dog
 \ No newline at end of file
@@ -25,14 +36,15 @@
 \ No newline at end of file
 ```
 
-- Чтобы создать свой тест-кейс, разместите входной текст в папке ./testCases, а вывод в папке ./testX. Номер должен совпадать, и в конце названия добавьте "X".
- 
-Пример :
-```
-input: ./testCases/case12.txt
-output: ./testX/case12X.txt
-``` 
-- Рекомендую тестить небольшие куски текста а не книгу за раз 💀
-## GOOD LUCK 💩
+## Go directories
 
+- # TestCases 
+All test cases are stored in this folder 
 
+- # ExpectedOutput
+Expected output for `TestCases`, pay atentions to the `\n` newlines at the end of the file
+
+- # YourOutput
+This is your output
+
+You can create your own test cases following the original
