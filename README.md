@@ -38,13 +38,13 @@ Failed cases will be displayed in red, with `your output` on top and the `expect
 
 ## Go directories
 
-- # TestCases 
+- TestCases 
 All test cases are stored in this folder 
 
-- # ExpectedOutput
+- ExpectedOutput
 Expected output for `TestCases`, pay atentions to the `\n` newlines at the end of the file
 
-- # YourOutput
+- YourOutput
 This is your output
 
 You can create your own test cases following the original
